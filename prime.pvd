@@ -1,7 +1,8 @@
 is-prime 1 = false;
+is-prime 4 = false;
 is-prime n = {
     if (greater-than n 0) @{
-        divisors = filter (range 2 n)
+        divisors = filter (range 2 (^ n 0.5))
         lambda(i -> {
             equal 0 (% n i)
         });
