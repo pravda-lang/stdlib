@@ -1,7 +1,10 @@
+is-prime 1 = false;
 is-prime n = {
-    divisors = filter (range 2 n)
-    lambda(i -> {
-        equal 0 (% n i)
-    });
-    equal 0 (len divisors)
+    if (greater-than n 0) @{
+        divisors = filter (range 2 n)
+        lambda(i -> {
+            equal 0 (% n i)
+        });
+        equal 0 (len divisors)
+    } false
 }
