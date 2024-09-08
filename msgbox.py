@@ -1,4 +1,5 @@
 import tkinter
+
 def main(msg):
     master = tkinter.Tk()
     master.title("Pravda GUI System")
