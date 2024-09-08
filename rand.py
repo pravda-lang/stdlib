@@ -1,3 +1,4 @@
 import random
-def main(a, b):
-    return random.randint(a, b)
+
+def main(start, end, step):
+    return random.randrange(start, end, step)
