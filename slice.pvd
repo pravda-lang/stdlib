@@ -1,5 +1,0 @@
-slice list indexes = {
-    map indexes \(i -> {
-        stdlib/index.pvd list i
-    })
-}
