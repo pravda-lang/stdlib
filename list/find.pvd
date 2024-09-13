@@ -3,13 +3,13 @@ find array target = {
     flag = true;
     while @(flag) @{
         index = + index 1;
-        fetch = stdlib/index.pvd array index;
+        fetch = stdlib/list/index.pvd array index;
         result = if (equal index (len array)) @{
             list false null
         } @{
             list (not (equal fetch target)) index
         };
-        flag = stdlib/index.pvd result 0;
-        stdlib/index.pvd result 1
+        flag = stdlib/list/index.pvd result 0;
+        stdlib/list/index.pvd result 1
     }
 }
