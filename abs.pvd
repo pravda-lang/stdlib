@@ -1,7 +1,0 @@
-abs n = {
-    if (less-than n 0) @{
-        - 0 n
-    } @{
-        n
-    }
-}
