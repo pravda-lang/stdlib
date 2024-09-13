@@ -1,8 +1,0 @@
-join array key = {
-    index = 1; result = stdlib/index.pvd array 0;
-    while @(less-than index (len array)) @{
-        result = concat result key (stdlib/index.pvd array index);
-        index = + index 1;
-        result
-    }
-}
