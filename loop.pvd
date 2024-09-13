@@ -1,3 +1,0 @@
-loop count block = {
-    for (range count) lambda(_ -> eval block)
-}
