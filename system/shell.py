@@ -1,4 +1,7 @@
 import subprocess
 
 def main(command):
-    subprocess.run(command)
+    if isinstance(command, list):
+        subprocess.run(" ".join(command), shell=True)
+    else:
+        subprocess.run(command, shell=True)
