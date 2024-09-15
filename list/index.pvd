@@ -1,13 +1,17 @@
 index list spec = {
-    index = 0;
-    result = (while @(less-than index spec) @{
-        list = cdr list;
-        index = + index 1;
-        list
-    });
-    if (equal result null) @{
-        car list
+    if (or (greater-than spec (- (len list) 1)) (less-than spec 0)) @{
+        null
     } @{
-        car result
+        index = 0;
+        result = (while @(less-than index spec) @{
+            list = cdr list;
+            index = + index 1;
+            list
+        });
+        if (equal result null) @{
+            car list
+        } @{
+            car result
+        }
     }
 }
