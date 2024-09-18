@@ -2,12 +2,7 @@ index list spec = {
     if (or (greater-than spec (- (len list) 1)) (less-than spec 0)) @{
         null
     } @{
-        index = 0;
-        result = (while @(less-than index spec) @{
-            list = cdr list;
-            index = + index 1;
-            list
-        });
+        result = reduce (range spec) @list \(index -> cdr list);
         if (equal result null) @{
             car list
         } @{
