@@ -1,0 +1,5 @@
+set array index value = {
+    before = stdlib/list/slice.pvd array (range index);
+    after = stdlib/list/slice.pvd array (range (+ index 1) (len array));
+    list ~before value ~after
+}
